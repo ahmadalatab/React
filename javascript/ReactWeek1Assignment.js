@@ -16,7 +16,7 @@ class Bootcamp {
         const isExisiting = this.students.filter(studentexist => studentexist.email === student.email).length === 1;
         if (isExisiting === false) {
             this.students.push(student);
-            console.log(`Registering ${student.email} to the bootcamp Web Dev Fundamentals`);
+            console.log(`Registering ${student.email} to the bootcamp ${this.name}`);
         } else {
             console.log("Email already exists.");
         }
@@ -24,6 +24,7 @@ class Bootcamp {
     }
 }
 
-const student1 = new Student("ahmad", "ahmad@gmail.com", "bootcamp");
+const student1 = new Student("ahmad", "ahmad@gmail.com", "california");
 const bootcamp1 = new Bootcamp ("html", "advanced");
-const student2 = new Student ("jesenia", "jesenia@gmail.com", "bootcamp");
+const student2 = new Student ("jesenia", "jesenia@gmail.com", "vegas");
+const bootcamp2 = new Bootcamp ("fullstack", "advanced");
