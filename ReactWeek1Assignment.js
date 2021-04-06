@@ -6,12 +6,14 @@ class Student {
     }
 
 }
+
 class Bootcamp {
     constructor(name, level, students=[]) {
         this.name = name;
         this.level = level;
         this.students = students;
     }
+    
     registerStudent = function(student){
         const isExisiting = this.students.filter(studentexist => studentexist.email === student.email).length === 1;
         if (isExisiting === false) {
