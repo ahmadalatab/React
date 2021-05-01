@@ -19,7 +19,7 @@ function RenderCampsite({campsite}){
             </div>
         )
     }
-    function RenderComments({comments, addComment, campsiteId}){
+    function RenderComments({comments, postComment, campsiteId}) {
         if(comments){
             return(
                 <div className="col-md-5 m-1">
@@ -29,7 +29,7 @@ function RenderCampsite({campsite}){
                             <p>{comment.text}</p>
                             <p>--{comment.author}, -{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
                         </div>)}
-                        <CommentForm campsiteId={campsiteId} addComment={addComment} />
+                        <CommentForm campsiteId={campsiteId} postComment={postComment} />
                 </div>
             );
         }else{
@@ -53,7 +53,7 @@ function RenderCampsite({campsite}){
                     <div className="row">
                         <RenderCampsite campsite={props.campsite} />
                         <RenderComments comments={props.comments} 
-                            addComment={props.addComment}
+                            postComment={props.postComment}
                             campsiteId={props.campsite.id}
                         />
                     </div>
@@ -102,7 +102,7 @@ const minLength = len => val => val && (val.length >= len);
 
         handleSubmit(values) {
             this.toggleModal();
-            this.props.addComment(this.props.campsiteId, values.rating, values.author, values.text);
+            this.props.postComment(this.props.campsiteId, values.rating, values.author, values.text);
         }
 
         toggleModal() {
