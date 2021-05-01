@@ -193,6 +193,14 @@
       "text": "I caught a world-record-breaking trout here on my last visit.",
       "author": "McKenzie Sebastian",
       "date": "2019-02-18T18:12Z"
+    },
+    {
+      "campsiteId": 3,
+      "rating": "2",
+      "author": "Test",
+      "text": "Test",
+      "date": "2021-05-01T06:11:43.075Z",
+      "id": 20
     }
   ],
   "partners": [
@@ -244,6 +252,16 @@
       "agree": true,
       "contactType": "Email",
       "feedback": "test"
+    },
+    {
+      "firstName": "Ahmad",
+      "lastName": "atab",
+      "phoneNum": "9494949412",
+      "email": "ahmadatab86@gmail.com",
+      "agree": false,
+      "contactType": "Phone",
+      "feedback": "Test",
+      "id": 1
     }
   ]
 }
